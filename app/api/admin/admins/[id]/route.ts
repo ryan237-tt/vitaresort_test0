@@ -4,14 +4,14 @@ import { requireSuperAdmin } from "@/app/lib/admin-auth";
 
 export async function DELETE(
   req: NextRequest,
-  context: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   const admin = await requireSuperAdmin();
   if (!admin) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const { id } = await context.params;
+  const { id } = await params; // Await the params Promise
 
   if (id === admin.id) {
     return NextResponse.json(
