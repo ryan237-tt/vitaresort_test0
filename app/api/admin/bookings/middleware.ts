@@ -4,14 +4,19 @@ import type { NextRequest } from "next/server";
 export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // allow login page + login api
-  if (pathname.startsWith("/admin/login") || pathname.startsWith("/api/admin/login")) {
+  // Autoriser la page de login + API login
+  if (
+    pathname.startsWith("/admin/login") ||
+    pathname.startsWith("/api/admin/login")
+  ) {
     return NextResponse.next();
   }
 
+  // Protéger tout le reste de /admin et /api/admin
   if (pathname.startsWith("/admin") || pathname.startsWith("/api/admin")) {
-    const cookie = req.cookies.get("admin_token")?.value;
-    if (!cookie || cookie !== process.env.ADMIN_TOKEN) {
+    const adminId = req.cookies.get("admin_token")?.value;
+
+    if (!adminId) {
       return NextResponse.redirect(new URL("/admin/login", req.url));
     }
   }

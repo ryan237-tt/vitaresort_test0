@@ -5,7 +5,6 @@ export async function GET(
   req: Request,
   context: { params: Promise<{ id: string }> }
 ) {
-  // ✅ UNWRAP params CORRECTEMENT
   const { id } = await context.params;
 
   const res = await pool.query(
