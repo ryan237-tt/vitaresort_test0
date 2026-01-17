@@ -1,11 +1,12 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 import { pool } from "@/app/lib/db";
 import { requireSuperAdmin } from "@/app/lib/admin-auth";
 
 export async function DELETE(
-  req: NextRequest,
+  request: NextRequest,
   context: { params: Promise<{ id: string }> }
-): Promise<Response> {
+) {
   const admin = await requireSuperAdmin();
   if (!admin) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -13,7 +14,7 @@ export async function DELETE(
 
   const { id } = await context.params;
 
-  // Sécurité : un super admin ne peut pas se supprimer lui-même
+  // Sécurité : ne jamais supprimer soi-même
   if (id === admin.id) {
     return NextResponse.json(
       { error: "You cannot delete yourself" },
