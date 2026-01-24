@@ -1,3 +1,5 @@
+"use client"
+
 export default function AboutPage() {
   return (
     <main className="pt-32 px-6 max-w-4xl mx-auto">
