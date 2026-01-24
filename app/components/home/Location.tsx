@@ -11,7 +11,7 @@ export default function Location() {
         {/* Image */}
         <div className="reveal-up rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
           <Image
-            src="/images/home/location-makepe.JPG"
+            src="/location-makepe.JPG"
             alt="Only Resort exterior in Makepe"
             width={1200}
             height={900}
