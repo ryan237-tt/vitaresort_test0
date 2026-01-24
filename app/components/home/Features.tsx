@@ -48,7 +48,7 @@ export default function Features() {
         
         {/* Section title */}
         <h2 className="h2-section text-center mb-12 sm:mb-16 reveal-up">
-          What Makes Vita Different
+          What Makes Residence Only Different
         </h2>
 
         {/* Grid */}

@@ -28,7 +28,7 @@ export default function DesignTech() {
           style={{ animationDelay: "200ms" }}
         >
           <Image
-            src="/images/home/design-suite.avif"
+            src="/images/home/design-suite.jpg"
             alt="Forest view from the suite"
             width={1200}
             height={900}

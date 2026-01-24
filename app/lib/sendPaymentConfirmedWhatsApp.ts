@@ -17,7 +17,7 @@ Hello ${data.firstName} 👋
 💳 Total: ${data.total.toLocaleString("fr-FR")} XAF
 🆔 Booking ID: ${data.bookingId}
 
-We look forward to welcoming you at Vita Resort 🌴
+We look forward to welcoming you at Residence Only 🌴
 
 If you have any questions, feel free to reply to this message.
   `.trim();

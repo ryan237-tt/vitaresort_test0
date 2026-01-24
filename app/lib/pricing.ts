@@ -15,11 +15,11 @@ export function nightsBetween(checkIn: string, checkOut: string): number {
 
 /**
  * Pricing policy:
- * - base price: 120000 XAF per night (from your schema)
+ * - base price: 150000 XAF per night (from your schema)
  * - taxes: 0 for now (adjust if needed)
  */
 export function calculatePricing(checkIn: string, checkOut: string): PricingResult {
-  const pricePerNight = 120000;
+  const pricePerNight = 150000;
   const nights = nightsBetween(checkIn, checkOut);
   const subtotal = nights * pricePerNight;
 

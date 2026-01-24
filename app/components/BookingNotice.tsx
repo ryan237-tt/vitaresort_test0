@@ -12,7 +12,7 @@ export default function BookingNotice() {
             </h3>
 
             <p className="text-gray-600 text-sm mb-3">
-              Vita Resort is a boutique suite hotel. We do not have:
+              Residence Only is a boutique suite hotel. We do not have:
             </p>
 
             <div className="flex flex-wrap gap-2 mb-3">

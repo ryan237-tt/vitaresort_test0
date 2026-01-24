@@ -6,7 +6,7 @@ export default function AboutImage() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="reveal-up relative aspect-[16/9] rounded-2xl overflow-hidden">
           <Image
-            src="/images/gallery/02_HERO_full-suite-warm-COMPLETE.png"
+            src="/images/gallery/design-suite.JPG"
             alt="Vita Resort interior atmosphere"
             fill
             className="object-cover"

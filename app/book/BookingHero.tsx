@@ -7,7 +7,7 @@ export default function BookingHero() {
     <section className="relative min-h-[520px] flex items-center justify-center overflow-hidden">
       {/* Background image */}
       <Image
-        src="/images/home/design-suite.avif" // <-- your Vita-like image
+        src="/images/home/design-suite.jpg" // <-- your Vita-like image
         alt="Luxury suite booking"
         fill
         priority

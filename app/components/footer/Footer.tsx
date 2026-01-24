@@ -14,14 +14,14 @@ export default function Footer() {
               Contact
             </h3>
             <div className="space-y-4 text-gray-300 text-sm font-accent">
-              <a href="tel:+237659099178" className="hover:text-[#E6C200] transition-colors duration-300">
-                +237 6 59 09 91 78
+              <a href="tel:+237694425910" className="hover:text-[#E6C200] transition-colors duration-300">
+                +237 6 94 42 59 10
               </a>
               <a href="mailto:contact@vitaresort.com" className="block hover:text-[#E6C200] transition-colors duration-300">
-                contact@vitaresort.com
+                contact@onlyresidency.com
               </a>
               <a
-                href="https://wa.me/237659099178"
+                href="https://wa.me/237694425910"
                 target="_blank"
                 className="inline-flex items-center gap-2 hover:text-[#E6C200] transition-colors duration-300"
               >
@@ -38,7 +38,7 @@ export default function Footer() {
             <ul className="space-y-4 text-sm text-gray-300 font-accent">
               <li><Link href="/suite">Suite</Link></li>
               <li><Link href="/gallery">Gallery</Link></li>
-              <li><Link href="/contact">Reserve</Link></li>
+              <li><Link href="/book">Reserve</Link></li>
               <li><Link href="/faq">FAQ</Link></li>
             </ul>
           </div>
@@ -60,9 +60,9 @@ export default function Footer() {
               Address
             </h3>
             <p className="text-sm text-gray-300 leading-relaxed font-accent">
-              Rue 6.126<br />
-              Golf Bastos<br />
-              Yaoundé, Cameroon
+              Derriere École Russe<br />
+              Makepé<br />
+              Douala, Cameroon
             </p>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400 font-accent">
-            © 2025 Vita Resort. All rights reserved.
+            © 2026 Residence Only. All rights reserved.
           </p>
           <p className="font-display text-[#E6C200] italic mt-4 md:mt-0">
             Designed, then built.

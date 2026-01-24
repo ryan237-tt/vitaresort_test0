@@ -8,7 +8,20 @@ export async function GET(
   const { id } = await context.params;
 
   const res = await pool.query(
-    `SELECT * FROM booking WHERE id = $1 LIMIT 1`,
+    `
+    SELECT
+      id,
+      first_name AS "firstName",
+      last_name  AS "lastName",
+      phone,
+      check_in::date  as "checkIn",
+      check_out::date as "checkOut",
+      total,
+      UPPER(payment_status) AS "paymentStatus"
+    FROM booking
+    WHERE id = $1
+    LIMIT 1
+    `,
     [id]
   );
 

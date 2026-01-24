@@ -3,26 +3,26 @@
 const methods = [
   {
     label: "Call",
-    value: "+237 6 59 09 91 78",
-    href: "tel:+237659099178",
+    value: "+237 6 94 42 59 10",
+    href: "tel:+237694425910",
     icon: "📞",
   },
   {
     label: "WhatsApp",
     value: "Chat with us",
-    href: "https://wa.me/237659099178",
+    href: "https://wa.me/237694425910",
     icon: "💬",
   },
   {
     label: "Email",
-    value: "contact@vitaresort.com",
-    href: "mailto:contact@vitaresort.com",
+    value: "contact@onlyresidency.com",
+    href: "mailto:contact@onlyresidency.com",
     icon: "✉️",
   },
   {
     label: "Address",
-    value: "Golf Bastos, Yaoundé",
-    href: "https://maps.google.com/?q=3.9104212,11.5004514",
+    value: "Derriere École Russe, Makepé, Douala,",
+    href: "https://maps.app.goo.gl/7SvMHT5hW5H1L7ASA?g_st=aw",
     icon: "📍",
   },
 ];

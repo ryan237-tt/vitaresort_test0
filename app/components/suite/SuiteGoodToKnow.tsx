@@ -23,7 +23,7 @@ export default function SuiteGoodToKnow() {
           className="reveal-up body-lg text-gray-700 text-center max-w-3xl mx-auto mb-20"
           style={{ animationDelay: "100ms" }}
         >
-          Vita Resort focuses exclusively on a refined suite experience.
+          Residence Only focuses exclusively on a refined suite experience.
           Everything is designed to offer calm, privacy, and effortless comfort —
           without distractions.
         </p>

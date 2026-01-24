@@ -7,8 +7,15 @@ import { getBooking } from "@/app/lib/api";
 
 type PaymentStatus = "PENDING" | "PAID" | "CANCELLED";
 
+
 export default function StepConfirm() {
   const { bookingId, reset } = useBookingStore();
+
+    // ✅ NEW: booking details (client-facing)
+  const [guestName, setGuestName] = useState<string>("");
+  const [phoneNumber, setPhoneNumber] = useState<string>("");
+  const [checkIn, setCheckIn] = useState<string>("");
+  const [checkOut, setCheckOut] = useState<string>("");
 
   const [status, setStatus] = useState<PaymentStatus | null>(null);
   const [total, setTotal] = useState<number | null>(null);
@@ -17,13 +24,6 @@ export default function StepConfirm() {
   // ✅ ENV
   const phone =
     process.env.NEXT_PUBLIC_WHATSAPP_PHONE || "237659099178";
-
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL?.startsWith("http")
-    ? process.env.NEXT_PUBLIC_SITE_URL
-    : "http://localhost:3000";
-
-const adminLink = `${siteUrl}/admin/bookings/${bookingId}`;
 
 
   // 🔁 Refresh booking status
@@ -35,6 +35,10 @@ const adminLink = `${siteUrl}/admin/bookings/${bookingId}`;
       const b = await getBooking(bookingId);
       setStatus(b.paymentStatus);
       setTotal(b.total);
+      setGuestName(`${b.firstName} ${b.lastName}`);
+      setPhoneNumber(b.phone);
+      setCheckIn(b.checkIn);
+      setCheckOut(b.checkOut);
     } finally {
       setLoading(false);
     }
@@ -56,10 +60,13 @@ const adminLink = `${siteUrl}/admin/bookings/${bookingId}`;
   // 📲 WhatsApp message (ADMIN LINK INCLUDED)
   const whatsappMessage = encodeURIComponent(
     [
-      "Hello Vita Resort,",
+      "Hello Residence Only,",
       "",
       "I want to confirm payment for my booking.",
       "",
+      `Guest: ${guestName}`,
+      `Phone: ${phoneNumber}`,
+      `Dates: ${checkIn} → ${checkOut}`,
       `Booking ID: ${bookingId}`,
       `Total: ${total} XAF`,
       "",

@@ -1,6 +1,8 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 
-const MAPS_URL = "https://maps.google.com/?q=3.9104212,11.5004514";
+const MAPS_URL = "https://maps.app.goo.gl/7SvMHT5hW5H1L7ASA?g_st=aw";
 
 export default function ContactMap() {
   return (
@@ -12,20 +14,19 @@ export default function ContactMap() {
 
         {/* Map container */}
         <div className="relative rounded-xl overflow-hidden shadow-lg mb-6 group">
-          <iframe
-            title="Vita Resort location"
-            src="https://www.google.com/maps?q=3.9104212,11.5004514&z=16&output=embed"
-            width="100%"
-            height="450"
+          {/* Utilisation de l'image locale */}
+          <img
+            src="/images/only_residence.png"
+            alt="Only Residence Location"
+            className="w-full h-[450px] object-cover"
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            className="pointer-events-none"
           />
 
           {/* Click overlay */}
           <a
             href={MAPS_URL}
             target="_blank"
+            rel="noopener noreferrer"
             aria-label="Open in Google Maps"
             className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition"
           >
@@ -43,6 +44,7 @@ export default function ContactMap() {
           <a
             href={MAPS_URL}
             target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-8 py-4 bg-[#857416] text-black font-semibold rounded-lg hover:opacity-90 transition"
           >
             Open Google Maps

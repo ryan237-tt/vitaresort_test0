@@ -1,11 +1,11 @@
-// middleware.ts
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { pool } from "@/app/lib/db";
 
-export function middleware(req: NextRequest) {
+export async function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // Pages/API accessibles sans session
+  // Autoriser login
   if (
     pathname.startsWith("/admin/login") ||
     pathname.startsWith("/api/admin/login")
@@ -14,8 +14,18 @@ export function middleware(req: NextRequest) {
   }
 
   if (pathname.startsWith("/admin") || pathname.startsWith("/api/admin")) {
-    const adminId = req.cookies.get("admin_id")?.value;
+    const adminId = req.cookies.get("admin_token")?.value;
     if (!adminId) {
+      return NextResponse.redirect(new URL("/admin/login", req.url));
+    }
+
+    // 🔐 Vérifie que l’admin existe
+    const res = await pool.query(
+      "SELECT id FROM admin_user WHERE id = $1 LIMIT 1",
+      [adminId]
+    );
+
+    if (res.rows.length === 0) {
       return NextResponse.redirect(new URL("/admin/login", req.url));
     }
   }

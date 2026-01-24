@@ -5,7 +5,7 @@ export default function AboutCTA() {
     <section className="py-20 bg-black text-white text-center">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="reveal-up font-display text-3xl md:text-4xl mb-8">
-          Ready to experience Vita?
+          Ready to experience Residence Only?
         </h2>
 
         <Link

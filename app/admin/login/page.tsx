@@ -1,5 +1,6 @@
 // app/admin/login/page.tsx
 "use client";
+import Link from "next/link";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -22,26 +23,29 @@ export default function AdminLoginPage() {
         body: JSON.stringify({ email, password }),
       });
 
-      let data: any = null;
-      try {
-        data = await res.json();
-      } catch {
-        // réponse vide ou invalide
+      const data = await res.json();
+
+      // 🔴 CAS CRITIQUE : mot de passe pas encore créé
+      if (res.status === 403 && data?.code === "PASSWORD_NOT_SET") {
+        window.location.href = `/admin/set-password?email=${encodeURIComponent(email)}`;
+        return;
       }
 
       if (!res.ok) {
         setError(data?.error ?? "Login failed");
-        setLoading(false);
         return;
       }
 
+      // ✅ Login OK
       window.location.href = "/admin/bookings";
+
     } catch (e) {
-      setError("Server error. Try again.");
+      setError("Server error");
     } finally {
       setLoading(false);
     }
   }
+
 
 
   return (
@@ -77,6 +81,24 @@ export default function AdminLoginPage() {
           >
             {loading ? "Signing in..." : "Sign in"}
           </button>
+
+          {/* A faire plus tard */}
+
+          {/* <Link
+            href="/admin/forgot-password"
+            className="text-sm text-gray-500 underline"
+          >
+            Forgot password?
+          </Link> */}
+
+          <Link
+            href="/admin/settings/password"
+            className="text-sm text-gray-500 hover:underline"
+          >
+            Change password
+          </Link>
+
+
         </div>
       </div>
     </main>

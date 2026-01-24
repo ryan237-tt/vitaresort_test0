@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background image */}
       <Image
-        src="/images/home/hero-forest-suite.avif"
+        src="/images/home/hero-forest-suite.jpg"
         alt="Forest view luxury suite"
         fill
         priority
@@ -31,7 +31,7 @@ export default function Hero() {
             A thoughtfully designed suite. Forest views from the bed.
             Spa bathroom. Intelligent lighting.
             <br />
-            In the heart of Golf Bastos.
+            In the heart of Makepé.
           </p>
 
           {/* CTAs */}

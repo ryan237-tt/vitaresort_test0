@@ -1,9 +1,9 @@
 "use client";
 
 const DAY_ROUTE =
-  "https://maps.google.com/?q=3.9104212,11.5004514&travelmode=driving";
+  "https://maps.app.goo.gl/7SvMHT5hW5H1L7ASA?g_st=aw";
 const NIGHT_ROUTE =
-  "https://maps.google.com/?q=3.9104212,11.5004514&travelmode=driving";
+  "https://maps.app.goo.gl/7SvMHT5hW5H1L7ASA?g_st=aw";
 
 export default function ContactVideos() {
   return (

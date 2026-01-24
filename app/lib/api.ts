@@ -16,13 +16,25 @@ export type CreateBookingResponse = {
 */
 
 export async function getBooking(id: string) {
-  const res = await fetch(`/api/bookings/${id}`, { cache: "no-store" });
+  const res = await fetch(`/api/bookings/${id}`, {
+    cache: "no-store",
+  });
+
   const data = await res.json();
-  if (!res.ok) throw new Error(data?.error ?? "Fetch failed");
+
+  if (!res.ok) {
+    throw new Error(data?.error ?? "Fetch failed");
+  }
+
   return data.booking as {
     id: string;
-    paymentStatus: "PENDING" | "PAID" | "CANCELLED";
+    firstName: string;
+    lastName: string;
+    phone: string;
+    checkIn: string;
+    checkOut: string;
     total: number;
+    paymentStatus: "PENDING" | "PAID" | "CANCELLED";
   };
 }
 

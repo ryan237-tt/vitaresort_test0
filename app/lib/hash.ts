@@ -7,3 +7,4 @@ export function hashPassword(password: string) {
 export function comparePassword(password: string, hash: string) {
   return bcrypt.compareSync(password, hash);
 }
+//bcrypt.hashSync("MotDePasseFort123!", 10);

@@ -121,7 +121,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" data-cursor>
             <Image
-              src="/vita-logo.jpg"
+              src="/residence-logo.jpeg"
               alt="Vita Resort"
               width={70}
               height={20}
@@ -137,6 +137,7 @@ export default function Header() {
               ["/gallery", "Gallery"],
               ["/about", "About"],
               ["/contact", "Contact"],
+              ["/faq", "Faq"],
             ].map(([href, label]) => (
               <Link
                 key={href}

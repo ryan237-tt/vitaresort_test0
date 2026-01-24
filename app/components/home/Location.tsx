@@ -11,8 +11,8 @@ export default function Location() {
         {/* Image */}
         <div className="reveal-up rounded-xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
           <Image
-            src="/images/home/location-bastos.jpg"
-            alt="Vita Resort exterior in Golf Bastos"
+            src="/images/home/location-makepe.JPG"
+            alt="Only Resort exterior in Makepe"
             width={1200}
             height={900}
             className="w-full h-auto object-cover"
@@ -22,13 +22,13 @@ export default function Location() {
         {/* Text */}
         <div className="reveal-up" style={{ animationDelay: "200ms" }}>
           <h2 className="h2-section mb-6">
-            In the heart of Golf Bastos.
+            In the heart of Makepé.
           </h2>
 
           <p className="body-lg text-gray-600 mb-8">
             Minutes from embassies and tree-lined residential streets.
             Adjacent to the Presidential area.
-            One of the most secure neighborhoods in Yaoundé.
+            One of the most secure neighborhoods in Douala.
           </p>
 
           <Link

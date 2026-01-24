@@ -17,7 +17,7 @@ const pillars = [
   {
     icon: "📍",
     title: "Secure Location",
-    text: "Golf Bastos, adjacent to the Presidential Palace.",
+    text: "Ecole Russe, Makepe, Douala, Cameroon.",
   },
 ];
 
