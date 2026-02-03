@@ -7,8 +7,11 @@ import CustomCursor from "./components/CustomCursor";
 
 
 export const metadata: Metadata = {
-  title: "Vita Resort",
-  description: "Luxury resort experience",
+  title: "Residence Only",
+  description: "Residence Only offers a refined hotel-style suite experience in Douala.",
+  verification: {
+    google: "bJXkDYrsiJmaaLktVaiBHvAUmqLIN1RwcbThCGN_LjE",
+  },
 };
 
 export default function RootLayout({
