@@ -3,7 +3,6 @@ import SuiteCTA from "../components/suite/SuiteCTA";
 import SuiteFeatures from "../components/suite/SuiteFeatures";
 import SuiteGallery from "../components/suite/SuiteGallery";
 import SuiteGoodToKnow from "../components/suite/SuiteGoodToKnow";
-import SuiteSpecifications from "../components/suite/SuiteSpecifications";
 
 export default function SuitePage() {
   return (
@@ -12,7 +11,6 @@ export default function SuitePage() {
       <SuiteGallery />
       <SuiteFeatures />
       <SuiteGoodToKnow />
-      <SuiteSpecifications />
       <SuiteCTA />
     </main>
   );
