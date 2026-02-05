@@ -28,11 +28,6 @@ export default function Features() {
       text: "Chromotherapy bathtub, smart shower, mirror TV.",
     },
     {
-      icon: "🌲",
-      title: "Forest View",
-      text: "Floor-to-ceiling windows. Nature from the bed.",
-    },
-    {
       icon: "🔒",
       title: "24/7 Security",
       text: "Cameras, electric fence. Adjacent to the Presidential area.",
