@@ -23,15 +23,14 @@ export default function Hero() {
         <div className="max-w-5xl px-6 text-center text-white">
           {/* Hero Title */}
           <h1 className="h1-hero animate-fadeUp">
-            {/* Wake up facing the forest. */}
+            Treat yourself to a well-deserved rest!
           </h1>
 
           {/* Subtitle */}
           <p className="body-lg text-white/90 max-w-3xl mx-auto mb-10 animate-fadeUp delay-200">
-            {/* A thoughtfully designed suite. Forest views from the bed.
-            Spa bathroom. Intelligent lighting. */}
+            Our duplex has been designed down to the smallest detail for your utmost comfort, with a view of the pool from its private balcony.
             <br />
-            {/* In the heart of Makepé. */}
+             In the heart of Makepé. 
           </p>
 
           {/* CTAs */}
