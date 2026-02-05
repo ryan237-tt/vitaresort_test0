@@ -98,6 +98,16 @@ export default function AdminLoginPage() {
             Change password
           </Link>
 
+            {email && (
+              <Link
+                href={`/admin/set-password?email=${encodeURIComponent(email)}`}
+                className="text-sm text-gray-500 hover:underline"
+              >
+                Set password (first login)
+              </Link>
+            )}
+
+
 
         </div>
       </div>
