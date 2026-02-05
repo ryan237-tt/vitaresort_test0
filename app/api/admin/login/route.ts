@@ -53,7 +53,7 @@ export async function POST(req: Request) {
     );
   }
 
-  // TODO: créer session / cookie ici
+
 
   return NextResponse.json({ ok: true });
 }
