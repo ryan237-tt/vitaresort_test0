@@ -54,13 +54,6 @@ const sections: Section[] = [
     ],
   },
   {
-    title: "Balcony",
-    items: [
-      { text: "Glass balustrade" },
-      { text: "Outdoor lounge seating" },
-    ],
-  },
-  {
     title: "Technology",
     items: [
       {
