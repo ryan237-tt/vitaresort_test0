@@ -6,7 +6,7 @@ export default function SuiteCTA() {
   return (
     <section className="py-20 bg-[#1C1B1A] text-white text-center">
       <h2 className="reveal-up h2-section mb-8">
-        Ready to experience the suite?
+        Ready to experience the suite ?
       </h2>
 
       <Link
