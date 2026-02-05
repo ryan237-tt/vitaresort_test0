@@ -16,7 +16,7 @@ const sections: Section[] = [
     items: [
       { text: "King-size bed with luxury bedding" },
       {
-        text: "Floor-to-ceiling windows with forest view directly from the bed",
+        text: "Floor-to-ceiling windows with view directly from the bed",
         featured: true,
       },
       { text: "Circular ceiling with indirect LED lighting" },
@@ -33,17 +33,15 @@ const sections: Section[] = [
         featured: true,
       },
       {
-        text: "Mirror TV (mirror when off, screen when on)",
-        featured: true,
-      },
-      {
-        text: "U by Moen smart shower with temperature memory",
+        text: "Mirror ",
         featured: true,
       },
       { text: "Smart toilet with automatic lid" },
       { text: "Touchless fixtures" },
       { text: "Dark marble from floor to ceiling" },
-      { text: "Sheer curtains for privacy and natural light" },
+      { text: "Sheer curtains for privacy and natural light",
+        featured: true,
+       },
     ],
   },
   {
@@ -60,7 +58,6 @@ const sections: Section[] = [
     items: [
       { text: "Glass balustrade" },
       { text: "Outdoor lounge seating" },
-      { text: "View over the greenery of Golf Bastos" },
     ],
   },
   {
@@ -100,7 +97,7 @@ const sections: Section[] = [
       { text: "Motion, door and window sensors" },
       { text: "Adjacent to the Presidential Palace entrance" },
       {
-        text: "Advanced mosquito protection (UV traps, Anopheles attractants, fragrance-free solutions)",
+        text: "Advanced mosquito protection ",
         featured: true,
       },
       { text: "Smoke and carbon monoxide detectors (Nest)" },
